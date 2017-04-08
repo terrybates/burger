@@ -1,10 +1,13 @@
-<div >
-  <h2 class="uneaten-title">Ordered Burgers</h2>
-  <ul class="uneaten">
+<div class="container-fluid">
+  <div class="row">
+   <div class="col-md-4"> 
+   <br> 
+    <h2 class="uneaten-title">Ordered Burgers</h2>
+    <ul class="uneaten">
     
-    {{#each burgers}}
-      {{#unless this.devoured}}
-        <li>
+      {{#each burgers}}
+        {{#unless this.devoured}}
+          <li>
           
            <p>
             {{this.burger_name}}
@@ -21,10 +24,10 @@
   
 </div>
 
-<div class="row">
-  <div class="col-md-2"></div>
+
+  
     <div class="col-md-4" id="update">
-      <br><br><br>
+      <br>
         <form class="create-update-form" action="burgers/create" method="POST">
           <h2 class="add-title">Add a Burger</h2>
           <div class="form-group">
@@ -36,8 +39,8 @@
       </div>
     </div>
 
-    <div class="col-md-4" id="eaten">
-      <br><br><br>
+  <div class="col-md-4" id="eaten">
+      <br>
       <h2 class="eaten-title">Eaten Burgers</h2>
       <ul class="burgers-eaten">
         {{#each burgers}}
@@ -52,7 +55,6 @@
           {{/if}}
         {{/each}}
       </ul>
-    </div>
-    <div class="col-md-2"></div>
+    </div>    
+   </div>
 </div>
-
